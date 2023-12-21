@@ -1,0 +1,284 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* height: 30%; */
+  position: relative;
+}
+
+.mainscore {
+  width: 800px;
+  display: flex;
+  height: 158px;
+  border-radius: 13px;
+  border: 2px solid #fff;
+  margin-left: 242px;
+  margin-top: 62px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.scoretext {
+  padding: 10px;
+}
+
+.scoretext p {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 4px;
+  list-style: none;
+}
+
+.playerscore {
+  width: 139px;
+  height: 128px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: #fff;
+}
+
+.computerscore {
+  width: 139px;
+  height: 128px;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: #fff;
+  text-align: center;
+}
+
+.bothscore {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  margin-left: 20vw;
+  padding: 10px;
+  text-align: center;
+}
+
+.options {
+  cursor: pointer;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.stone {
+  background-color: #0074b6;
+  margin-top: 3%;
+  margin-left: 35em;
+}
+
+.scissors {
+  background-color: #bd00ff;
+  margin-top: 3%;
+  margin-left: 52em;
+}
+
+.paper {
+  background-color: #ffa943;
+  margin-top: 13%;
+  margin-left: 43em;
+}
+
+.whitebg {
+  display: grid;
+  place-items: center;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.triangle {
+  width: 12em;
+  height: 12em;
+  border: 1em solid rgba(0, 0, 0, 0.64);
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(225deg);
+  left: 50%;
+  top: 50%;
+  border-right: none;
+  border-bottom: none;
+}
+
+.triangle:before {
+  position: absolute;
+  content: "";
+  border-top: 1em solid rgba(0, 0, 0, 0.64);
+  width: calc(1.41 * (12em + 1em));
+  transform: rotate(-45deg);
+  left: -3.3em;
+  top: 5.35em;
+}
+
+.show {
+  margin-top: 3%;
+  margin-left: 35em;
+}
+
+.items {
+  display: none;
+}
+
+.showright {
+  margin-top: 3%;
+  margin-left: 52em;
+}
+
+.choices {
+  display: none;
+}
+
+.info {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20%;
+  color: #fff;
+  font-size: 19px;
+}
+
+.computer {
+  display: none;
+
+  place-items: center;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.win-modal {
+  width: 100%;
+  height: 28vh;
+  position: fixed;
+  display: grid;
+  place-items: center;
+  color: white;
+  display: none;
+}
+
+.play {
+  color: #6b6b6b;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.win-modal::before {
+  position: relative;
+  content: "";
+  background: white;
+  opacity: 0.6;
+  width: 100%;
+}
+
+.winner,
+.play {
+  z-index: 1;
+}
+
+.next {
+  width: 90px;
+  height: 40px;
+  border: 10px solid white;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  list-style: none;
+  background-color: #8cc461;
+}
+
+.rule {
+  width: 90px;
+  height: 40px;
+  border: 5px solid white;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  list-style: none;
+  background-color: #8cc461;
+  color: white;
+}
+
+.bottomright {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20%;
+  gap: 20px;
+  margin-right: 20px;
+}
+
+.next {
+  display: none;
+}
+
+.showmodal {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  width: 20%;
+  margin-left: 70%;
+  bottom: 50px;
+  right: 40px;
+  position: absolute;
+  display: none;
+}
+
+.inshowmodal {
+  align-items: center;
+
+  background-color: #004429;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.inshowmodal h1 {
+  text-align: center;
+}
+
+.showmodal .closeicon {
+  position: absolute;
+  top: -1.8rem;
+  right: -1.8rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  border: 0.3rem solid white;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Delius Unicase", sans-serif;
+  cursor: pointer;
+  color: white;
+}
+
+.showmodalright {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 200px;
+  gap: 20px;
+  margin-right: 20px;
+}
